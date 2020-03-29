@@ -21,14 +21,8 @@ public class GodsServiceIntegrationTest {
 
     @Test
     public void toDigitTest() {
+        Integer totalValue = godsService.toDigitNameStartWith("Z");
 
-        Map<String, String> listOfNames = godsService.toDigitNameStartWith("Zeus");
-
-        // verify(godsService, times(1)).getRomansGods();
-        // verify(godsService, times(1)).getGreeksGods();
-        // verify(godsService, times(1)).getNordicsGods();
-        // verify(godsService, times(1)).toDigitNameStartWith("Zeus");
-
-        assertEquals("90101117115", listOfNames.get("Zeus"));
+        assertEquals(27, totalValue.intValue());
     }
 }
